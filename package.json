@@ -1,6 +1,6 @@
 {
   "name": "split-keywords",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "split keywords string into array",
   "main": "index.es5.js",
   "files": [
