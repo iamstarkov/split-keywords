@@ -16,28 +16,25 @@
 ```js
 import splitKeywords from 'split-keywords';
 
-splitKeywords('unicorns'); // unicorns
+splitKeywords('uni, corns'); // ['uni', 'corns']
+splitKeywords(',uni,, corns,meow,'); // ['uni', 'corns', 'meow']
+splitKeywords(); // undefined
 ```
 
 ## API
 
-### splitKeywords(input, [options])
+### splitKeywords(keywords)
 
-#### input
+```js
+// splitKeywords :: String -> [String]
+```
+
+#### keywords
 
 *Required*  
 Type: `String`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `Boolean`  
-Default: `false`
-
-Lorem ipsum.
+Keywords delimited by coma.
 
 ## License
 
