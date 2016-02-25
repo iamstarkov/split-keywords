@@ -1,10 +1,13 @@
 /* eslint-env mocha */
 
-import { equal } from 'assert';
+import { deepEqual } from 'assert';
 import splitKeywords from './index';
 
 it('should splitKeywords', () =>
-  equal(splitKeywords('unicorns'), 'unicorns'));
+  deepEqual(splitKeywords('uni, corns'), ['uni', 'corns']));
 
-it('should splitKeywords invalid input', () =>
-  equal(splitKeywords(), undefined));
+it('should splitKeywords tricky', () =>
+  deepEqual(splitKeywords(',uni,, corns,meow,'), ['uni', 'corns', 'meow']));
+
+it('should splitKeywords empty input', () =>
+  deepEqual(splitKeywords(), undefined));
