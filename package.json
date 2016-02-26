@@ -11,7 +11,7 @@
     "coverage": "nyc -r=text -r=lcov npm test",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "test": "mocha --compilers js:babel-register",
+    "test": "ava --require babel-register",
     "tdd": "chokidar *.js -c 'npm test' --initial -t 50 -p",
     "transpile": "babel index.js --out-file index.es5.js",
     "prepublish": "npm run transpile",
@@ -36,6 +36,7 @@
   "homepage": "https://github.com/iamstarkov/split-keywords#readme",
   "devDependencies": {
     "assert": "*",
+    "ava": "^0.12.0",
     "babel-cli": "^6.5.1",
     "babel-eslint": "^5.0.0",
     "babel-plugin-add-module-exports": "^0.1.2",
