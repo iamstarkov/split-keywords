@@ -11,7 +11,7 @@
     "coverage": "nyc -r=text -r=lcov npm test",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "test": "babel-node test | tap-spec",
+    "test": "tape test.js -r babel-register | tap-spec",
     "tdd": "chokidar *.js -c 'npm test' --initial -t 50 -p",
     "transpile": "babel index.js --out-file index.es5.js",
     "prepublish": "npm run transpile",
