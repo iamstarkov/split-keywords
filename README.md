@@ -18,7 +18,6 @@ import splitKeywords from 'split-keywords';
 
 splitKeywords('uni, corns'); // ['uni', 'corns']
 splitKeywords(',uni,, corns,meow,'); // ['uni', 'corns', 'meow']
-splitKeywords(); // undefined
 ```
 
 ## API

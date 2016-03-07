@@ -1,11 +1,12 @@
 import R from 'ramda';
+import c from 'rho-contracts';
 
 // splitKeywords :: String -> [String]
 const splitKeywords = R.pipe(
-  R.defaultTo(''),
+  keywords => c.string.check(keywords),
   R.split(','),
   R.map(R.trim),
   R.reject(R.isEmpty)
 );
 
-export default R.unary(R.unless(R.isNil, splitKeywords));
+export default splitKeywords;

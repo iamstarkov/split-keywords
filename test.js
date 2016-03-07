@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 
-import { deepEqual } from 'assert';
+import { deepEqual, throws } from 'assert';
 import splitKeywords from './index';
 
 it('should splitKeywords', () =>
@@ -10,4 +10,4 @@ it('should splitKeywords tricky', () =>
   deepEqual(splitKeywords(',uni,, corns,meow,'), ['uni', 'corns', 'meow']));
 
 it('should splitKeywords empty input', () =>
-  deepEqual(splitKeywords(), undefined));
+  throws(() => { splitKeywords(); }, /Expected string, but got undefined/));
