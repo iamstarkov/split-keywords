@@ -10,4 +10,7 @@ it('should splitKeywords tricky', () =>
   deepEqual(splitKeywords(',uni,, corns,meow,'), ['uni', 'corns', 'meow']));
 
 it('should splitKeywords empty input', () =>
-  throws(() => { splitKeywords(); }, /Expected string, but got undefined/));
+  throws(() => { splitKeywords(); }, /`keywords` should be String/));
+
+it('should splitKeywords invalid input', () =>
+  throws(() => { splitKeywords(1); }, /`keywords` should be String/));
