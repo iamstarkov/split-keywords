@@ -1,9 +1,8 @@
 import R from 'ramda';
-import c from 'rho-contracts';
 
 // splitKeywords :: String -> [String]
 const splitKeywords = R.pipe(
-  keywords => c.string.check(keywords),
+  R.unless(R.isString, () => { throw new Error('Expected string, but got undefined'); }),
   R.split(','),
   R.map(R.trim),
   R.reject(R.isEmpty)
