@@ -52,7 +52,6 @@
     "rimraf": "*"
   },
   "dependencies": {
-    "ramda": "^0.19.1",
-    "rho-contracts": "^0.0.5"
+    "ramda": "^0.19.1"
   }
 }
