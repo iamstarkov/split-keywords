@@ -44,7 +44,7 @@
     "chokidar-cli": "^1.2.0",
     "coveralls": "*",
     "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^6.0.2",
+    "eslint-config-airbnb": "^9.0.0",
     "eslint-plugin-require-path-exists": "^1.1.5",
     "mocha": "*",
     "npm-run-all": "*",
