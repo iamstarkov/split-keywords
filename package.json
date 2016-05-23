@@ -46,7 +46,7 @@
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.2",
     "eslint-plugin-require-path-exists": "^1.1.5",
-    "mocha": "*",
+    "mocha": "2.5.0",
     "npm-run-all": "*",
     "nyc": "^6.0.0",
     "rimraf": "*"
